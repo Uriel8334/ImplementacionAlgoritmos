@@ -36,14 +36,15 @@
             this.lblPerimeter = new System.Windows.Forms.Label();
             this.grbProcess = new System.Windows.Forms.GroupBox();
             this.btnAlgorithPMedio = new System.Windows.Forms.Button();
+            this.btnCalculate = new System.Windows.Forms.Button();
             this.btnAlgorithDis = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
-            this.btnCalculate = new System.Windows.Forms.Button();
             this.grbInputs = new System.Windows.Forms.GroupBox();
             this.txtRadius = new System.Windows.Forms.TextBox();
             this.lblRadius = new System.Windows.Forms.Label();
             this.grbCanvas = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.picCanvas = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.X = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +52,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.grpBoxText1 = new System.Windows.Forms.GroupBox();
             this.lblText1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.grpBoxData = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.grbOutputs.SuspendLayout();
@@ -139,6 +139,16 @@
             this.btnAlgorithPMedio.UseVisualStyleBackColor = true;
             this.btnAlgorithPMedio.Click += new System.EventHandler(this.btnAlgorithPMedio_Click);
             // 
+            // btnCalculate
+            // 
+            this.btnCalculate.Location = new System.Drawing.Point(6, 28);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(75, 23);
+            this.btnCalculate.TabIndex = 0;
+            this.btnCalculate.Text = "Calcular";
+            this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            // 
             // btnAlgorithDis
             // 
             this.btnAlgorithDis.Location = new System.Drawing.Point(6, 92);
@@ -168,16 +178,6 @@
             this.btnReset.Text = "Resetear";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnCalculate
-            // 
-            this.btnCalculate.Location = new System.Drawing.Point(6, 28);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(75, 23);
-            this.btnCalculate.TabIndex = 0;
-            this.btnCalculate.Text = "Calcular";
-            this.btnCalculate.UseVisualStyleBackColor = true;
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // grbInputs
             // 
@@ -221,6 +221,16 @@
             this.grbCanvas.TabIndex = 16;
             this.grbCanvas.TabStop = false;
             this.grbCanvas.Text = "Gráfico";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(239, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Aquí podrá visualizar el gráfico.";
             // 
             // picCanvas
             // 
@@ -279,16 +289,6 @@
             this.lblText1.Text = "Aplicacion para trazado de círculos.\r\n\r\n1. Ingrese un radio\r\n\r\n2. Por Algoritmo d" +
     "e discretización, presione el botón ->\r\n\r\n3. Por Algoritmo de Punto Medio, presi" +
     "one el botón ->";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Aquí podrá visualizar el gráfico.";
             // 
             // grpBoxData
             // 
