@@ -20,6 +20,9 @@ namespace ImplementacionAlgoritmos
 
             // Inicializar el canvas
             ObjLine.InitializeCanvas(picCanvas, dataGridView1);
+
+            UIStyleUtility.ApplyStylesToForm(this);
+
         }
 
         // Aplicando Singleton

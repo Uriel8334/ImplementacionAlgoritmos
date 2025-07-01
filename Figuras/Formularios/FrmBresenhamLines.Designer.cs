@@ -57,7 +57,6 @@
             this.groupBox1.Size = new System.Drawing.Size(615, 69);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Trazado de lineas por Bresenham";
             // 
             // lblText5
             // 
@@ -82,7 +81,6 @@
             this.grpDataGrid.Size = new System.Drawing.Size(378, 444);
             this.grpDataGrid.TabIndex = 13;
             this.grpDataGrid.TabStop = false;
-            this.grpDataGrid.Text = "Tabla de datos";
             // 
             // lblText3
             // 
@@ -120,7 +118,6 @@
             this.grpBoxFigure.Size = new System.Drawing.Size(615, 444);
             this.grpBoxFigure.TabIndex = 11;
             this.grpBoxFigure.TabStop = false;
-            this.grpBoxFigure.Text = "Gráfico";
             // 
             // lblText1
             // 
@@ -157,7 +154,6 @@
             this.grpOptions.Size = new System.Drawing.Size(378, 69);
             this.grpOptions.TabIndex = 12;
             this.grpOptions.TabStop = false;
-            this.grpOptions.Text = "Opciones";
             // 
             // button1
             // 

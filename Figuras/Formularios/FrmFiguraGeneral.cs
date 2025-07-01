@@ -18,6 +18,9 @@ namespace ImplementacionAlgoritmos
         public FrmFiguraGeneral()
         {
             InitializeComponent();
+
+            UIStyleUtility.ApplyStylesToForm(this);
+
         }
 
         private void FrmFiguraGeneral_Load(object sender, EventArgs e)

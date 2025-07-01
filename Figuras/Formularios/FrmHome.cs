@@ -17,6 +17,8 @@ namespace ImplementacionAlgoritmos
         public FrmHome()
         {
             InitializeComponent();
+            UIStyleUtility.ApplyStylesToForm(this);
+
         }
 
         private void DDATrazadoDeLineasToolStripMenuItem_Click_1(object sender, EventArgs e)

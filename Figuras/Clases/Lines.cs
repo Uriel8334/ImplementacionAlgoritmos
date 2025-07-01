@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace ImplementacionAlgoritmos
@@ -265,11 +266,22 @@ namespace ImplementacionAlgoritmos
         }
 
         // Método para resetear el canvas
+        // Método para resetear el canvas
         public void ResetCanvas(PictureBox picCanvas)
         {
             using (Graphics g = Graphics.FromImage(bitmap))
             {
                 g.Clear(Color.PapayaWhip);
+
+                // Opcionalmente, agregar un sutil efecto de gradiente
+                using (LinearGradientBrush backgroundBrush = new LinearGradientBrush(
+                    new Rectangle(0, 0, canvas.Width, canvas.Height),
+                    Color.FromArgb(250, 245, 230), // Crema muy claro
+                    Color.FromArgb(245, 245, 220), // Beige claro
+                    LinearGradientMode.ForwardDiagonal))
+                {
+                    g.FillRectangle(backgroundBrush, 0, 0, canvas.Width, canvas.Height);
+                }
             }
 
             canvas.Invalidate();
@@ -281,7 +293,6 @@ namespace ImplementacionAlgoritmos
 
             isFirstPoint = true;
         }
-
         // Método para cerrar el formulario
         public void CloseForm(Form form)
         {

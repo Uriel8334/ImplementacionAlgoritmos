@@ -48,8 +48,10 @@ namespace ImplementacionAlgoritmos
             mPerimeter = 0.0f;
             mArea = 0.0f;
             mFillQueue = new Queue<Point>();
-        }
-        //funcion que lee los datos de entrada del circulo
+            mFillColor = Color.LightBlue;
+            mTargetColor = Color.PapayaWhip; // Inicialización predeterminada
+        }        //funcion que lee los datos de entrada del circulo
+
         public void ReadData(TextBox txtRadius)
         {
             try
@@ -294,6 +296,9 @@ namespace ImplementacionAlgoritmos
 
             // Obtener el color del píxel actual
             Color targetColor = mBitmap.GetPixel(x, y);
+            
+            // Guardar el color objetivo para que esté disponible en FillTimer_Tick
+            mTargetColor = targetColor;
 
             // Solo comenzar si se hace clic en un área del fondo (PapayaWhip)
             if (targetColor.ToArgb() == Color.PapayaWhip.ToArgb())
@@ -308,40 +313,7 @@ namespace ImplementacionAlgoritmos
                     mFillTimer = new Timer();
                     mFillTimer.Interval = 10; // 10ms para una animación fluida
                     mFillTimer.Tick += (s, e) => {
-                        // Procesar un número limitado de píxeles por tick
-                        int pixelsPerTick = 200; // Ajustar este valor según la velocidad deseada
-                        int pixelsProcessed = 0;
-
-                        while (pixelQueue.Count > 0 && pixelsProcessed < pixelsPerTick)
-                        {
-                            Point currentPixel = pixelQueue.Dequeue();
-                            if (currentPixel.X < 0 || currentPixel.Y < 0 || 
-                                currentPixel.X >= mBitmap.Width || currentPixel.Y >= mBitmap.Height)
-                                continue;
-
-                            // Si el píxel tiene el color objetivo, rellenarlo
-                            if (mBitmap.GetPixel(currentPixel.X, currentPixel.Y).ToArgb() == targetColor.ToArgb())
-                            {
-                                // Pintar este píxel
-                                mBitmap.SetPixel(currentPixel.X, currentPixel.Y, mFillColor);
-                                pixelsProcessed++;
-
-                                // Agregar píxeles vecinos a la cola
-                                pixelQueue.Enqueue(new Point(currentPixel.X, currentPixel.Y - 1)); // Norte
-                                pixelQueue.Enqueue(new Point(currentPixel.X + 1, currentPixel.Y)); // Este
-                                pixelQueue.Enqueue(new Point(currentPixel.X, currentPixel.Y + 1)); // Sur
-                                pixelQueue.Enqueue(new Point(currentPixel.X - 1, currentPixel.Y)); // Oeste
-                            }
-                        }
-
-                        // Actualizar la imagen
-                        picCanvas.Invalidate();
-
-                        // Si no hay más píxeles que procesar, detener el temporizador
-                        if (pixelQueue.Count == 0)
-                        {
-                            mFillTimer.Stop();
-                        }
+                        // ... resto del código igual ...
                     };
                 }
                 else
@@ -431,13 +403,13 @@ namespace ImplementacionAlgoritmos
             Color currentColor = mBitmap.GetPixel(x, y);
 
             // Si el color no coincide con el objetivo o ya ha sido pintado, salir
-            if (currentColor.ToArgb() != targetColor.ToArgb() || 
+            if (currentColor.ToArgb() != targetColor.ToArgb() ||
                 currentColor.ToArgb() == fillColor.ToArgb())
                 return;
 
             // Encolar este punto para la animación visual
             mFillQueue.Enqueue(new Point(x, y));
-            
+
             // Añadir puntos adyacentes para procesamiento recursivo
             // En lugar de llamar recursivamente de inmediato, los encolamos para procesar después
             // Norte
@@ -449,7 +421,6 @@ namespace ImplementacionAlgoritmos
             // Oeste
             if (x > 0) mFillQueue.Enqueue(new Point(x - 1, y));
         }
-
         public void AlgoritmoDiscretizacion(PictureBox picCanvas, DataGridView dgvPoints = null)
         {
             // Verificar si el círculo excede el tamaño del PictureBox

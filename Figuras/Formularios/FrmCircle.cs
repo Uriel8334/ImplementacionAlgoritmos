@@ -25,6 +25,9 @@ namespace ImplementacionAlgoritmos
         public FrmCircle()
         {
             InitializeComponent();
+
+            UIStyleUtility.ApplyStylesToForm(this);
+
         }
         //aplicando Singleton
         public static FrmCircle GetInstance()

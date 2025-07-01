@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFiguraGeneral));
             this.grbCanvas = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.picCanvas = new System.Windows.Forms.PictureBox();
             this.grbProcess = new System.Windows.Forms.GroupBox();
             this.btnExit = new System.Windows.Forms.Button();
@@ -42,10 +43,9 @@
             this.lblRadio = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             this.grbCanvas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.grbProcess.SuspendLayout();
@@ -66,7 +66,15 @@
             this.grbCanvas.Size = new System.Drawing.Size(526, 444);
             this.grbCanvas.TabIndex = 7;
             this.grbCanvas.TabStop = false;
-            this.grbCanvas.Text = "Gráfico";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(239, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Aquí podrá visualizar el gráfico.";
             // 
             // picCanvas
             // 
@@ -90,7 +98,6 @@
             this.grbProcess.Size = new System.Drawing.Size(275, 100);
             this.grbProcess.TabIndex = 8;
             this.grbProcess.TabStop = false;
-            this.grbProcess.Text = "Opciones";
             // 
             // btnExit
             // 
@@ -135,7 +142,6 @@
             this.grbInputs.Size = new System.Drawing.Size(245, 100);
             this.grbInputs.TabIndex = 6;
             this.grbInputs.TabStop = false;
-            this.grbInputs.Text = "Entrada de datos";
             // 
             // txtNumeroLados
             // 
@@ -179,26 +185,17 @@
             this.groupBox1.Size = new System.Drawing.Size(373, 169);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Relleno por inundacion en figuras";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(3, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(360, 136);
+            this.label1.Size = new System.Drawing.Size(317, 120);
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Aquí podrá visualizar el gráfico.";
             // 
             // groupBox2
             // 
@@ -211,16 +208,6 @@
             this.groupBox2.Size = new System.Drawing.Size(373, 375);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Gráfico";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(321, 34);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Aquí podrá visualizar los puntos dibujados \r\ncon los pasos realizados\r\n";
             // 
             // dataGridView1
             // 
@@ -230,6 +217,15 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(354, 298);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(321, 34);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Aquí podrá visualizar los puntos dibujados \r\ncon los pasos realizados\r\n";
             // 
             // FrmFiguraGeneral
             // 

@@ -46,9 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\BezierCurve.cs" />
     <Compile Include="Clases\Circle.cs" />
+    <Compile Include="Clases\CohenSutherland.cs" />
     <Compile Include="Clases\GeneralFigure.cs" />
     <Compile Include="Clases\Lines.cs" />
+    <Compile Include="Clases\ScanlineFill.cs" />
     <Compile Include="Formularios\FrmCircle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +84,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilidades\UIStyleUtility.cs" />
     <EmbeddedResource Include="Formularios\FrmCircle.resx">
       <DependentUpon>FrmCircle.cs</DependentUpon>
     </EmbeddedResource>

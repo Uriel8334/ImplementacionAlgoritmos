@@ -77,7 +77,6 @@
             this.grbOutputs.Size = new System.Drawing.Size(370, 90);
             this.grbOutputs.TabIndex = 17;
             this.grbOutputs.TabStop = false;
-            this.grbOutputs.Text = "Cálculos";
             // 
             // txtArea
             // 
@@ -127,7 +126,6 @@
             this.grbProcess.Size = new System.Drawing.Size(256, 160);
             this.grbProcess.TabIndex = 15;
             this.grbProcess.TabStop = false;
-            this.grbProcess.Text = "Opciones";
             // 
             // btnAlgorithPMedio
             // 
@@ -190,7 +188,6 @@
             this.grbInputs.Size = new System.Drawing.Size(370, 64);
             this.grbInputs.TabIndex = 14;
             this.grbInputs.TabStop = false;
-            this.grbInputs.Text = "Entrada de datos";
             // 
             // txtRadius
             // 
@@ -220,7 +217,6 @@
             this.grbCanvas.Size = new System.Drawing.Size(637, 486);
             this.grbCanvas.TabIndex = 16;
             this.grbCanvas.TabStop = false;
-            this.grbCanvas.Text = "Gráfico";
             // 
             // label1
             // 
@@ -276,7 +272,6 @@
             this.grpBoxText1.Size = new System.Drawing.Size(440, 160);
             this.grpBoxText1.TabIndex = 19;
             this.grpBoxText1.TabStop = false;
-            this.grpBoxText1.Text = "Trazado de círculos";
             // 
             // lblText1
             // 
@@ -284,11 +279,11 @@
             this.lblText1.Location = new System.Drawing.Point(13, 28);
             this.lblText1.Margin = new System.Windows.Forms.Padding(10);
             this.lblText1.Name = "lblText1";
-            this.lblText1.Size = new System.Drawing.Size(410, 119);
+            this.lblText1.Size = new System.Drawing.Size(410, 85);
             this.lblText1.TabIndex = 0;
-            this.lblText1.Text = "Aplicacion para trazado de círculos.\r\n\r\n1. Ingrese un radio\r\n\r\n2. Por Algoritmo d" +
-    "e discretización, presione el botón ->\r\n\r\n3. Por Algoritmo de Punto Medio, presi" +
-    "one el botón ->";
+            this.lblText1.Text = "Aplicacion para trazado de círculos.\r\n\r\n1. Ingrese un radio\r\n2. Por Algoritmo de " +
+    "discretización, presione el botón ->\r\n3. Por Algoritmo de Punto Medio, presione " +
+    "el botón ->";
             // 
             // grpBoxData
             // 
@@ -301,7 +296,6 @@
             this.grpBoxData.Size = new System.Drawing.Size(440, 486);
             this.grpBoxData.TabIndex = 20;
             this.grpBoxData.TabStop = false;
-            this.grpBoxData.Text = "Tabla de datos";
             // 
             // label2
             // 
