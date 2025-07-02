@@ -83,7 +83,7 @@
             this.txtArea.Enabled = false;
             this.txtArea.Location = new System.Drawing.Point(102, 57);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(100, 23);
+            this.txtArea.Size = new System.Drawing.Size(198, 23);
             this.txtArea.TabIndex = 3;
             // 
             // txtPerimeter
@@ -91,7 +91,7 @@
             this.txtPerimeter.Enabled = false;
             this.txtPerimeter.Location = new System.Drawing.Point(102, 16);
             this.txtPerimeter.Name = "txtPerimeter";
-            this.txtPerimeter.Size = new System.Drawing.Size(100, 23);
+            this.txtPerimeter.Size = new System.Drawing.Size(198, 23);
             this.txtPerimeter.TabIndex = 2;
             // 
             // lblArea
@@ -129,7 +129,7 @@
             // 
             // btnAlgorithPMedio
             // 
-            this.btnAlgorithPMedio.Location = new System.Drawing.Point(6, 125);
+            this.btnAlgorithPMedio.Location = new System.Drawing.Point(5, 101);
             this.btnAlgorithPMedio.Name = "btnAlgorithPMedio";
             this.btnAlgorithPMedio.Size = new System.Drawing.Size(237, 25);
             this.btnAlgorithPMedio.TabIndex = 4;
@@ -149,7 +149,7 @@
             // 
             // btnAlgorithDis
             // 
-            this.btnAlgorithDis.Location = new System.Drawing.Point(6, 92);
+            this.btnAlgorithDis.Location = new System.Drawing.Point(5, 70);
             this.btnAlgorithDis.Name = "btnAlgorithDis";
             this.btnAlgorithDis.Size = new System.Drawing.Size(237, 25);
             this.btnAlgorithDis.TabIndex = 3;
@@ -191,9 +191,9 @@
             // 
             // txtRadius
             // 
-            this.txtRadius.Location = new System.Drawing.Point(95, 25);
+            this.txtRadius.Location = new System.Drawing.Point(105, 25);
             this.txtRadius.Name = "txtRadius";
-            this.txtRadius.Size = new System.Drawing.Size(97, 23);
+            this.txtRadius.Size = new System.Drawing.Size(195, 23);
             this.txtRadius.TabIndex = 2;
             // 
             // lblRadius
@@ -232,9 +232,9 @@
             // 
             this.picCanvas.BackColor = System.Drawing.Color.PapayaWhip;
             this.picCanvas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picCanvas.Location = new System.Drawing.Point(6, 44);
+            this.picCanvas.Location = new System.Drawing.Point(6, 58);
             this.picCanvas.Name = "picCanvas";
-            this.picCanvas.Size = new System.Drawing.Size(625, 436);
+            this.picCanvas.Size = new System.Drawing.Size(625, 422);
             this.picCanvas.TabIndex = 0;
             this.picCanvas.TabStop = false;
             this.picCanvas.Click += new System.EventHandler(this.picCanvas_Click);

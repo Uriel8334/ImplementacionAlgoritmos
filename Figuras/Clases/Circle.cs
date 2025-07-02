@@ -49,7 +49,7 @@ namespace ImplementacionAlgoritmos
             mArea = 0.0f;
             mFillQueue = new Queue<Point>();
             mFillColor = Color.LightBlue;
-            mTargetColor = Color.PapayaWhip; // Inicialización predeterminada
+            mTargetColor = UIStyleUtility.ControlBackgroundColor; // Inicialización predeterminada
         }        //funcion que lee los datos de entrada del circulo
 
         public void ReadData(TextBox txtRadius)
@@ -102,7 +102,7 @@ namespace ImplementacionAlgoritmos
             mBitmap = new Bitmap(picCanvas.Width, picCanvas.Height);
             using (mGraph = Graphics.FromImage(mBitmap))
             {
-                mGraph.Clear(Color.PapayaWhip);
+                mGraph.Clear(UIStyleUtility.ControlBackgroundColor);
             }
 
             picCanvas.Image = mBitmap;
@@ -142,7 +142,7 @@ namespace ImplementacionAlgoritmos
                 mBitmap = new Bitmap(picCanvas.Width, picCanvas.Height);
                 using (Graphics g = Graphics.FromImage(mBitmap))
                 {
-                    g.Clear(Color.PapayaWhip);
+                    g.Clear(UIStyleUtility.ControlBackgroundColor);
                 }
             }
 
@@ -193,7 +193,7 @@ namespace ImplementacionAlgoritmos
             // Limpiar el bitmap (fondo)
             using (Graphics g = Graphics.FromImage(mBitmap))
             {
-                g.Clear(Color.PapayaWhip);
+                g.Clear(UIStyleUtility.ControlBackgroundColor);
             }
 
             // Mostrar el bitmap en el PictureBox
@@ -301,7 +301,7 @@ namespace ImplementacionAlgoritmos
             mTargetColor = targetColor;
 
             // Solo comenzar si se hace clic en un área del fondo (PapayaWhip)
-            if (targetColor.ToArgb() == Color.PapayaWhip.ToArgb())
+            if (targetColor.ToArgb() == UIStyleUtility.ControlBackgroundColor.ToArgb())
             {
                 // Crear una cola para los píxeles a procesar
                 Queue<Point> pixelQueue = new Queue<Point>();

@@ -47,16 +47,45 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\BezierCurve.cs" />
+    <Compile Include="Clases\BSpline.cs" />
     <Compile Include="Clases\Circle.cs" />
     <Compile Include="Clases\CohenSutherland.cs" />
+    <Compile Include="Clases\CohenSutherlandAlgorithm.cs" />
+    <Compile Include="Clases\Ellipse.cs" />
     <Compile Include="Clases\GeneralFigure.cs" />
     <Compile Include="Clases\Lines.cs" />
+    <Compile Include="Clases\LinesSutherland.cs" />
     <Compile Include="Clases\ScanlineFill.cs" />
+    <Compile Include="Clases\Sutherland_HodgmanAlgorithm.cs" />
+    <Compile Include="Formularios\FrmBezierCurve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmBezierCurve.Designer.cs">
+      <DependentUpon>FrmBezierCurve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmBSpline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmBSpline.Designer.cs">
+      <DependentUpon>FrmBSpline.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmCircle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmCircle.Designer.cs">
       <DependentUpon>FrmCircle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCohenSutherland.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmCohenSutherland.Designer.cs">
+      <DependentUpon>FrmCohenSutherland.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEllipse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEllipse.Designer.cs">
+      <DependentUpon>FrmEllipse.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmFiguraGeneral.cs">
       <SubType>Form</SubType>
@@ -85,8 +114,20 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades\UIStyleUtility.cs" />
+    <EmbeddedResource Include="Formularios\FrmBezierCurve.resx">
+      <DependentUpon>FrmBezierCurve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmBSpline.resx">
+      <DependentUpon>FrmBSpline.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCircle.resx">
       <DependentUpon>FrmCircle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmCohenSutherland.resx">
+      <DependentUpon>FrmCohenSutherland.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEllipse.resx">
+      <DependentUpon>FrmEllipse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmFiguraGeneral.resx">
       <DependentUpon>FrmFiguraGeneral.cs</DependentUpon>

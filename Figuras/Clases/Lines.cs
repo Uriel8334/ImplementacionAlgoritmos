@@ -43,7 +43,7 @@ namespace ImplementacionAlgoritmos
             bitmap = new Bitmap(canvas.Width, canvas.Height);
             using (Graphics g = Graphics.FromImage(bitmap))
             {
-                g.Clear(Color.PapayaWhip);
+                g.Clear(UIStyleUtility.ControlBackgroundColor);
             }
 
             // Asignar el bitmap al canvas
@@ -271,7 +271,7 @@ namespace ImplementacionAlgoritmos
         {
             using (Graphics g = Graphics.FromImage(bitmap))
             {
-                g.Clear(Color.PapayaWhip);
+                g.Clear(UIStyleUtility.ControlBackgroundColor);
 
                 // Opcionalmente, agregar un sutil efecto de gradiente
                 using (LinearGradientBrush backgroundBrush = new LinearGradientBrush(

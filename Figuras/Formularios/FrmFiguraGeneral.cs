@@ -69,5 +69,12 @@ namespace ImplementacionAlgoritmos
             // Cerrar el formulario
             ObjFiguraGeneral.CloseForm(this);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Aplicar relleno Scanline al polígono actual
+            ObjFiguraGeneral.StartScanlineFillOnPolygon();
+
+        }
     }
 }

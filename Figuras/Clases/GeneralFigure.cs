@@ -86,7 +86,7 @@ namespace ImplementacionAlgoritmos
             mBitmap = new Bitmap(picCanvas.Width, picCanvas.Height);
             using (Graphics g = Graphics.FromImage(mBitmap))
             {
-                g.Clear(Color.PapayaWhip);
+                g.Clear(UIStyleUtility.ControlBackgroundColor);
             }
 
             picCanvas.Image = mBitmap;
@@ -146,7 +146,7 @@ namespace ImplementacionAlgoritmos
 
             using (Graphics g = Graphics.FromImage(mBitmap))
             {
-                g.Clear(Color.PapayaWhip);
+                g.Clear(UIStyleUtility.ControlBackgroundColor);
 
                 // Dibujar el polígono
                 DrawFigure(g, mSides, mRadius);
@@ -185,7 +185,7 @@ namespace ImplementacionAlgoritmos
 
             using (Graphics g = Graphics.FromImage(mBitmap))
             {
-                g.Clear(Color.PapayaWhip);
+                g.Clear(UIStyleUtility.ControlBackgroundColor);
             }
 
             // Calcular los vértices de la figura
@@ -341,7 +341,7 @@ namespace ImplementacionAlgoritmos
             Color targetColor = mBitmap.GetPixel(x, y);
 
             // Solo comenzar si se hace clic en un área del fondo (PapayaWhip)
-            if (targetColor.ToArgb() == Color.PapayaWhip.ToArgb())
+            if (targetColor.ToArgb() == UIStyleUtility.ControlBackgroundColor.ToArgb())
             {
                 // Limpiar la cola existente
                 mFillQueue.Clear();
@@ -362,7 +362,7 @@ namespace ImplementacionAlgoritmos
             int pixelsProcessed = 0;
 
             // Color objetivo (fondo)
-            Color targetColor = Color.PapayaWhip;
+            Color targetColor = UIStyleUtility.ControlBackgroundColor;
 
             // Procesar un lote de píxeles
             while (mFillQueue.Count > 0 && pixelsProcessed < pixelsPerTick)
@@ -406,6 +406,95 @@ namespace ImplementacionAlgoritmos
         public void CloseForm(Form form)
         {
             form.Close();
+        }
+
+        // Nuevo método para el relleno Scanline
+        public void StartScanlineFillOnPolygon()
+        {
+            if (mVertices == null || mVertices.Length < 3)
+            {
+                MessageBox.Show("Primero debe dibujar un polígono", "Error");
+                return;
+            }
+
+            // Convertir vértices a lista de puntos para reutilizar el algoritmo
+            List<Point> polygonVertices = new List<Point>(mVertices);
+
+            // Aplicar Scanline Fill al polígono existente
+            ApplyScanlineFill(polygonVertices);
+        }
+
+        // Implementación del algoritmo Scanline Fill para el polígono actual
+        private void ApplyScanlineFill(List<Point> vertices)
+        {
+            if (vertices.Count < 3) return;
+
+            // Encontrar límites Y
+            int minY = int.MaxValue;
+            int maxY = int.MinValue;
+
+            foreach (Point vertex in vertices)
+            {
+                if (vertex.Y < minY) minY = vertex.Y;
+                if (vertex.Y > maxY) maxY = vertex.Y;
+            }
+
+            // Color para el relleno Scanline (diferente al FloodFill)
+            Color scanlineFillColor = Color.Orange;
+
+            // Procesar cada línea de barrido
+            for (int y = minY; y <= maxY; y++)
+            {
+                List<int> intersections = FindScanlineIntersections(y, vertices);
+                intersections.Sort();
+
+                // Rellenar entre pares de intersecciones
+                for (int i = 0; i < intersections.Count - 1; i += 2)
+                {
+                    if (i + 1 < intersections.Count)
+                    {
+                        int startX = intersections[i];
+                        int endX = intersections[i + 1];
+
+                        for (int x = startX; x <= endX; x++)
+                        {
+                            if (x >= 0 && x < mBitmap.Width && y >= 0 && y < mBitmap.Height)
+                            {
+                                // Solo rellenar si no es parte del borde
+                                Color currentColor = mBitmap.GetPixel(x, y);
+                                if (currentColor.ToArgb() != mPen.Color.ToArgb())
+                                {
+                                    mBitmap.SetPixel(x, y, scanlineFillColor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            picCanvas.Invalidate();
+        }
+
+        // Encontrar intersecciones de la línea de barrido con el polígono
+        private List<int> FindScanlineIntersections(int y, List<Point> vertices)
+        {
+            List<int> intersections = new List<int>();
+
+            for (int i = 0; i < vertices.Count; i++)
+            {
+                Point p1 = vertices[i];
+                Point p2 = vertices[(i + 1) % vertices.Count];
+
+                // Verificar si la línea de barrido intersecta con este borde
+                if ((p1.Y <= y && p2.Y > y) || (p2.Y <= y && p1.Y > y))
+                {
+                    // Calcular la intersección X
+                    double intersectionX = p1.X + (double)(y - p1.Y) / (p2.Y - p1.Y) * (p2.X - p1.X);
+                    intersections.Add((int)Math.Round(intersectionX));
+                }
+            }
+
+            return intersections;
         }
     }
 }

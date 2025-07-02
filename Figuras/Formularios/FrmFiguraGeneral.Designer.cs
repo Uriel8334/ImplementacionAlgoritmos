@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.picCanvas = new System.Windows.Forms.PictureBox();
             this.grbProcess = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnCalculate = new System.Windows.Forms.Button();
@@ -89,6 +90,7 @@
             // grbProcess
             // 
             this.grbProcess.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.grbProcess.Controls.Add(this.button1);
             this.grbProcess.Controls.Add(this.btnExit);
             this.grbProcess.Controls.Add(this.btnReset);
             this.grbProcess.Controls.Add(this.btnCalculate);
@@ -99,9 +101,19 @@
             this.grbProcess.TabIndex = 8;
             this.grbProcess.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(11, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(237, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Relleno por ScanLineFill";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(174, 49);
+            this.btnExit.Location = new System.Drawing.Point(173, 29);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 2;
@@ -111,7 +123,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(92, 49);
+            this.btnReset.Location = new System.Drawing.Point(92, 29);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 1;
@@ -121,7 +133,7 @@
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(10, 49);
+            this.btnCalculate.Location = new System.Drawing.Point(11, 28);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(75, 23);
             this.btnCalculate.TabIndex = 0;
@@ -221,7 +233,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 33);
+            this.label3.Location = new System.Drawing.Point(6, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(321, 34);
             this.label3.TabIndex = 1;
@@ -274,5 +286,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }

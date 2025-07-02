@@ -34,6 +34,10 @@
             this.bresenhamLineasRectasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.discretizacionDeCircunferenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.algoritmoDeRellenoDeFigurasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.curvaDeBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bresenhamParaElipsesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bSplineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.algoritmosCohenSutherlandHodgmanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,10 +58,14 @@
             this.dDATrazadoDeLineasToolStripMenuItem,
             this.bresenhamLineasRectasToolStripMenuItem,
             this.discretizacionDeCircunferenciasToolStripMenuItem,
-            this.algoritmoDeRellenoDeFigurasToolStripMenuItem});
+            this.algoritmoDeRellenoDeFigurasToolStripMenuItem,
+            this.curvaDeBToolStripMenuItem,
+            this.bresenhamParaElipsesToolStripMenuItem,
+            this.bSplineToolStripMenuItem,
+            this.algoritmosCohenSutherlandHodgmanToolStripMenuItem});
             this.algoritmosToolStripMenuItem.Name = "algoritmosToolStripMenuItem";
-            this.algoritmosToolStripMenuItem.Size = new System.Drawing.Size(126, 20);
-            this.algoritmosToolStripMenuItem.Text = "Tipos de Algoritmos";
+            this.algoritmosToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.algoritmosToolStripMenuItem.Text = "Algoritmos";
             // 
             // dDATrazadoDeLineasToolStripMenuItem
             // 
@@ -87,6 +95,34 @@
             this.algoritmoDeRellenoDeFigurasToolStripMenuItem.Text = "Algoritmo de relleno de figuras (Relleno por inundacion)";
             this.algoritmoDeRellenoDeFigurasToolStripMenuItem.Click += new System.EventHandler(this.AlgoritmoDeRellenoDeFigurasToolStripMenuItem_Click_1);
             // 
+            // curvaDeBToolStripMenuItem
+            // 
+            this.curvaDeBToolStripMenuItem.Name = "curvaDeBToolStripMenuItem";
+            this.curvaDeBToolStripMenuItem.Size = new System.Drawing.Size(425, 22);
+            this.curvaDeBToolStripMenuItem.Text = "Curva de Bezier";
+            this.curvaDeBToolStripMenuItem.Click += new System.EventHandler(this.curvaDeBToolStripMenuItem_Click);
+            // 
+            // bresenhamParaElipsesToolStripMenuItem
+            // 
+            this.bresenhamParaElipsesToolStripMenuItem.Name = "bresenhamParaElipsesToolStripMenuItem";
+            this.bresenhamParaElipsesToolStripMenuItem.Size = new System.Drawing.Size(425, 22);
+            this.bresenhamParaElipsesToolStripMenuItem.Text = "Bresenham para Elipses";
+            this.bresenhamParaElipsesToolStripMenuItem.Click += new System.EventHandler(this.bresenhamParaElipsesToolStripMenuItem_Click);
+            // 
+            // bSplineToolStripMenuItem
+            // 
+            this.bSplineToolStripMenuItem.Name = "bSplineToolStripMenuItem";
+            this.bSplineToolStripMenuItem.Size = new System.Drawing.Size(425, 22);
+            this.bSplineToolStripMenuItem.Text = "B-Spline";
+            this.bSplineToolStripMenuItem.Click += new System.EventHandler(this.bSplineToolStripMenuItem_Click);
+            // 
+            // algoritmosCohenSutherlandHodgmanToolStripMenuItem
+            // 
+            this.algoritmosCohenSutherlandHodgmanToolStripMenuItem.Name = "algoritmosCohenSutherlandHodgmanToolStripMenuItem";
+            this.algoritmosCohenSutherlandHodgmanToolStripMenuItem.Size = new System.Drawing.Size(425, 22);
+            this.algoritmosCohenSutherlandHodgmanToolStripMenuItem.Text = "Algoritmos Cohen-Sutherland-Hodgman";
+            this.algoritmosCohenSutherlandHodgmanToolStripMenuItem.Click += new System.EventHandler(this.algoritmosCohenSutherlandHodgmanToolStripMenuItem_Click);
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,5 +151,9 @@
         private System.Windows.Forms.ToolStripMenuItem bresenhamLineasRectasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem discretizacionDeCircunferenciasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem algoritmoDeRellenoDeFigurasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem curvaDeBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bresenhamParaElipsesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bSplineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem algoritmosCohenSutherlandHodgmanToolStripMenuItem;
     }
 }

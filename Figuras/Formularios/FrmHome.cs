@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D; // Para dibujar bordes redondeados
+using AlgoritmoCohenSutherland;
 
 namespace ImplementacionAlgoritmos
 {
@@ -45,6 +37,34 @@ namespace ImplementacionAlgoritmos
             FrmFiguraGeneral frmFiguraGeneral = FrmFiguraGeneral.GetInstance();
             frmFiguraGeneral.MdiParent = this;
             frmFiguraGeneral.Show();
+        }
+
+        private void curvaDeBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBezier frmBezier = FrmBezier.GetInstance();
+            frmBezier.MdiParent = this;
+            frmBezier.Show();
+        }
+
+        private void bresenhamParaElipsesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEllipse frmEllipse = FrmEllipse.GetInstance();
+            frmEllipse.MdiParent = this;
+            frmEllipse.Show();
+        }
+
+        private void bSplineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBSpline frmBSpline = FrmBSpline.GetInstance();
+            frmBSpline.MdiParent = this;
+            frmBSpline.Show();
+        }
+
+        private void algoritmosCohenSutherlandHodgmanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCohenSutherland frmCohenSutherland = new FrmCohenSutherland();
+            frmCohenSutherland.MdiParent = this;
+            frmCohenSutherland.Show();
         }
     }
     
